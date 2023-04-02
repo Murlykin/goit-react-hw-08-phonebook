@@ -16,7 +16,7 @@ padding: 10px 0;
 
 export const Button = styled.button`
   cursor: pointer;
-  width: 90px;
+  width: 100px;
   height: 34px;
   border-radius: 5px;
   border: 1px solid #ff6b08;
