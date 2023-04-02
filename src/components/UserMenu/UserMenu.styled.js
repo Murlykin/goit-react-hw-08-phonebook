@@ -25,7 +25,7 @@ export const Button = styled.button`
   color: #ff6b08;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   text-shadow: 0 0 1px #000000;
 margin-right:25px;
   &:hover {
