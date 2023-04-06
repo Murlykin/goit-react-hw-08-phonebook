@@ -1,14 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-        
-` ;
-
+`;
 
 export const PhoneTitle = styled.h2`
   display: block;
@@ -18,8 +15,8 @@ export const PhoneTitle = styled.h2`
 `;
 
 export const Loader = styled.div`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 `;
 
 export const MessageUser = styled.p`
@@ -28,4 +25,3 @@ export const MessageUser = styled.p`
   color: #333340;
   font-size: 18px;
 `;
-

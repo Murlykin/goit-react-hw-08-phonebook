@@ -4,20 +4,19 @@ import { getFilterValue } from 'redux/Contact/selectors';
 import { setFilter } from 'redux/Contact/filterSlice';
 
 export const Filter = () => {
-    const filterValue = useSelector(getFilterValue)
-    const dispatch = useDispatch();
-    
+  const filterValue = useSelector(getFilterValue);
+  const dispatch = useDispatch();
+
   return (
     <div>
-        <LabelFilter >Find contacts by name</LabelFilter>
+      <LabelFilter>Find contacts by name</LabelFilter>
 
-        <InputFilter
-              type="text"
-              value={filterValue}
-              name="filter"
-              onChange={(e) => dispatch(setFilter(e.target.value))}
-        />
+      <InputFilter
+        type="text"
+        value={filterValue}
+        name="filter"
+        onChange={e => dispatch(setFilter(e.target.value))}
+      />
     </div>
-        );
+  );
 };
-

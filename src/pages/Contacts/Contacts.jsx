@@ -5,9 +5,12 @@ import { ContactList } from '../../components/ContactList/ContactList';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { fetchContacts } from "../../redux/Contact/operations";
-import { getAllContacts, selectError, selectIsLoading } from '../../redux/Contact/selectors';
-
+import { fetchContacts } from '../../redux/Contact/operations';
+import {
+  getAllContacts,
+  selectError,
+  selectIsLoading,
+} from '../../redux/Contact/selectors';
 
 export default function Contacts() {
   const contacts = useSelector(getAllContacts);
@@ -19,17 +22,23 @@ export default function Contacts() {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-
   return (
-    <Container> 
+    <Container>
       <div>
-        
         <ContactForm />
         <PhoneTitle>Contacts</PhoneTitle>
         <Filter />
-        {isLoading&&!error?<Loader><ThreeDots /></Loader>:<ContactList />}
-        {!contacts.length && <MessageUser>There are no contacts in the Phonebook</MessageUser>}
+        {isLoading && !error ? (
+          <Loader>
+            <ThreeDots />
+          </Loader>
+        ) : (
+          <ContactList />
+        )}
+        {!contacts.length && (
+          <MessageUser>There are no contacts in the Phonebook</MessageUser>
+        )}
       </div>
     </Container>
   );
-};
+}
